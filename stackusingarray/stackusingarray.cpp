@@ -14,17 +14,19 @@ public:
 		top = -1;
 	}
 
-	int push(int element) {
+	void push() {
+		int element;
+		cout << "Enter element : ";
+		cin >> element;
+
 		if (top == 4) {
-			cout << "Number of data execeed the limit" << endl; //step 1
-			return 0;
+			cout << "\nNumber of data exceed the limit" << endl; //step 1
+			return ;
 		}
 		top++; //step 2
 		stack_array[top] = element; //step 3
 		cout << endl;
-		cout << element << "ditambahkan(pushed)" << endl;
-
-		return element;
+		cout << element << " ditambahkan(pushed)" << endl;
 	}
 
 	void pop() {
