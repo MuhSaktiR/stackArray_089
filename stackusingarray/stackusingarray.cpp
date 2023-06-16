@@ -56,3 +56,50 @@ public:
 		}
 	}
 };
+
+int main() {
+	stackArray s;
+	char ch;
+
+	while (true)
+	{
+		cout << endl;
+		cout << "\n----Menu Stack----\n" << endl;
+		cout << "1. Push \n" << endl;
+		cout << "2. Pop \n" << endl;
+		cout << "3. Display \n" << endl;
+		cout << "4. Exit \n" << endl;
+		cout << "Masukkan pilihan (1-4): ";
+		cin >> ch;
+		switch (ch)
+		{
+		case '1':
+			s.push();
+			break;
+
+		case '2':
+			if (s.empty()) {
+				cout << "\nStack is empty." << endl;
+				break;
+			}
+			s.pop();
+			break;
+
+		case '3':
+			s.display();
+			break;
+
+		case '4':
+		{
+			exit(0);
+		}
+		break;
+
+		default:
+		{
+			cout << "\nInvalid Choice." << endl;
+		}
+		break;
+		}
+	}
+}
